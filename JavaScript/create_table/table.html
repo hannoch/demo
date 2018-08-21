@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #contaner{
+            width: 45%;
+            margin: 0 auto;
+
+        }
+        #mytable{
+            width: 500px;
+        }
+        #inputshow{
+            display: none;
+        }
+        input{
+            width: 135px;
+        }
+    </style>
+</head>
+<body>
+<div id="contaner">
+<button onclick="createtable()">创建表格</button>
+<div id="newtable"></div>
+<div id="inputshow">
+    <input id="name" placeholder="请输入姓名">
+    <input id="age" placeholder="请输入年龄">
+    <input id="city" placeholder="请输入城市">
+    <button onclick="newRow()">添加一行</button>
+</div>
+</div>
+</body>
+</html>
+<script>
+    //arr = [{name:'张三',age:'18',city:'北京'}];
+    var  arr = new Array();
+    /*
+    * 创建表格
+    * */
+    function createtable() {
+        var mytable =  document.createElement('table');
+        mytable.setAttribute('id','mytable');
+        mytable.setAttribute('border','1');
+        mytable.setAttribute('cellpadding','0');
+        mytable.setAttribute('cellspacing','0');
+        document.getElementById('newtable').appendChild(mytable);
+        addDate();
+    }
+    /*
+    * 添加表头
+    * */
+    function addDate() {
+        var mytable = document.getElementById('mytable');
+        mytable.createCaption().innerText=  "人员信息表";
+        var tablehead = mytable.createTHead();
+        var newRow = tablehead.insertRow(0);
+        newRow.insertCell(0).innerText = '序号';
+        newRow.insertCell(1).innerText = '姓名';
+        newRow.insertCell(2).innerText = '年龄';
+        newRow.insertCell(3).innerText = '城市';
+        newRow.insertCell(4).innerText = '操作';
+        document.getElementById('inputshow').style.display='block';
+    }
+    /*
+  * 添加行
+  * */
+    function newRow() {//添加行
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var city = document.getElementById('city').value;
+        var obj = {name:name,age:age,city:city};
+        arr.push(obj);//添加元素到数组中
+        //console.log(arr);
+        var tbodyTr = document.getElementById('mytable').insertRow();//添加新行
+        tbodyTr.insertCell(0).innerText = arr.length;
+        tbodyTr.insertCell(1).innerText = name;
+        tbodyTr.insertCell(2).innerText = age;
+        tbodyTr.insertCell(3).innerText = city;
+        tbodyTr.insertCell(4).innerHTML = '<button onclick="deleteRow(this)">删除</button>';
+    }
+    /*
+   添加删除行
+   */
+    function deleteRow(ev){//删除行
+        var index = ev.parentNode.parentNode.rowIndex;
+        document.getElementById('mytable').deleteRow(index); //2-->1
+        arr.splice(index-1,1);
+        console.log(arr);
+        //  console.log(ev.rowIndex);
+        for(i=0;i<arr.length;i++){
+            document.getElementById('mytable').rows[i+1].cells[0].innerText = i+1;
+        }
+    }
+
+</script>
