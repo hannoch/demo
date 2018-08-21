@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品的遮罩效果</title>
+    <style>
+        .box1{
+            float: left;
+            margin-right: 30px;
+
+        }
+        .box-img{
+            width: 270px;
+            height: 269px;
+            position: relative;
+        }
+        #mask{
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.52);
+            color: white;
+            padding-top: 100px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box-img" ><img src="images/1.png" width="100%"/></div>
+    <div class="box-title">芒果奶油</div>
+    <div class="box-content">坚持应季凯特鲜切芒果</div>
+</div>
+<div class="box1">
+    <div class="box-img"><img src="images/2.png"  width="100%"/></div>
+    <div class="box-title">6口味切块组合</div>
+    <div class="box-content">多口味，精装</div>
+</div>
+<div class="box1">
+    <div class="box-img"><img src="images/3.png"  width="100%"/></div>
+    <div class="box-title">新卡</div>
+    <div class="box-content">低温乳脂奶油冷萃耶加雪菲</div>
+</div>
+<div class="box1">
+    <div class="box-img"><img src="images/4.png"  width="100%"/></div>
+    <div class="box-title">深艾尔</div>
+    <div class="box-content">精酿啤酒蛋糕</div>
+</div>
+</body>
+</html>
+<script>
+        var imgList = document.getElementsByClassName('box-img');
+        for(var i=0;i<imgList.length;i++){
+            imgList[i].onmouseenter = function () {
+                var mask = document.createElement('div');
+                mask.setAttribute('id','mask');
+                var title = this.nextElementSibling.innerHTML;//得到同胞节点
+                var content = this.nextElementSibling.nextElementSibling.innerHTML;//得到同胞的下一个同胞节点
+                mask.innerHTML= title +'<p></p>'+ content;
+                this.appendChild(mask);
+            }
+            imgList[i].onmouseleave =function () {
+                this.lastElementChild.remove();
+            }
+        }
+</script>
