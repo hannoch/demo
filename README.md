@@ -31,3 +31,13 @@
 
 ![8.png](https://upload-images.jianshu.io/upload_images/5451635-f12e00ab8db486f7.png)
 
+## 9.	完成下面效果，图片自找，
+> a)	当鼠标移上去出现遮罩，底下显示标题，右下角显示下载数量跟收藏，右上角显示两个按钮
+> b)	当点击收藏时，收藏变成红色，星星变红，右下角显示的收藏+1，再点击一次表示取消收藏
+> c)	当点击原图下载按钮时，可以下载图片，且下载+1
+![1.png](https://upload-images.jianshu.io/upload_images/5451635-7a4442dee5d869d4.png)
+![2.png](https://upload-images.jianshu.io/upload_images/5451635-7ee5c51db634af25.png)
+
+## 10 如图，将选择的内容显示在底下的已选择栏目块中
+![3.png](https://upload-images.jianshu.io/upload_images/5451635-27fe8883afcab365.png)
+
