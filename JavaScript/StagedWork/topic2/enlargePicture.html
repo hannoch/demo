@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大图片</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            position: relative;
+        }
+        #enlarge{
+            background: rgba(0, 0, 0, 0.93);
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            padding: 1px 100px 100% 20%;
+
+
+        }
+        #imgEng{
+            margin-top: 20px;
+            width: 80%;
+            vertical-align: middle;
+        }
+        #close-box{
+            width: 86%;
+            height: 97px;
+            line-height: 97px;
+        }
+        #close{
+            float: right;
+            cursor: pointer;
+            display: block;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<h3>2.	已知页面布局五张图片，鼠标移入时显示点击可查看大图，点击可查看大图，出现弹窗，点空白区域或按钮x可关闭大图恢复原本页面</h3>
+<div id="original">
+    <img id="img" src="1.jpg" width="20%"/>
+    <img src="2.jpg"  width="20%"/>
+    <img src="3.jpg"  width="20%"/>
+    <img src="4.jpg"  width="20%"/>
+    <img src="5.jpg"  width="20%"/>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var list = document.getElementById('original').children;
+    console.log(list);
+    for(var i=0;i<list.length;i++){
+        list[i].onclick =function () {
+            var top = document.createElement('div');
+            top.setAttribute('id','enlarge');
+            top.innerHTML='<div id="close-box"><img id="close" src="close.png"/> </div> ';
+            document.body.appendChild(top);//把div动态加到body
+            var imgEnlarge = document.createElement('img');
+            imgEnlarge.setAttribute('src',this.src);
+            imgEnlarge.setAttribute('id','imgEng');
+            document.getElementById('enlarge').appendChild(imgEnlarge);//把放大的图片加到div里
+            document.body.style.overflowY='hidden';//放大的时候把滚动条隐藏
+
+            //移除div
+            var close =document.getElementById('close');
+            close.onclick=function () {
+                document.getElementById('enlarge').remove();//当点击关闭按钮时，删除div
+            }
+            //点击空白区域关闭窗口未实现
+
+        }
+    }
+
+
+
+</script>
+

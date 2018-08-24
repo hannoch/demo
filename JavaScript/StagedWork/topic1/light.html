@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灯</title>
+</head>
+<body>
+<h3>1.	实现鼠标移上去灯泡变亮，移出变暗</h3>
+<div >
+    <img id="myimg" src="1.png" />
+</div>
+</body>
+</html>
+<script>
+    var change= document.getElementById('myimg');
+    change.onmouseenter=function () {
+        change.setAttribute('src','2.png')
+    }
+    change.onmouseleave=function () {
+        change.setAttribute('src','1.png')
+    }
+</script>
