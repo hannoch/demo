@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bigPicture{
+            width: 570px;
+            height: 600px;
+        }
+        .smallPicture{
+            float: left;
+            width: 570px;
+        }
+        .smallPicture img{
+            display: inline-block;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+<h3>7.	当鼠标移到小图片时，将小图片放大到大图片显示</h3>
+<div class="bigPicture">
+    <img id="bigimg" src="1.png" width="100%"/>
+</div>
+<div class="smallPicture">
+    <img id="1" src="1.png" onmouseenter="zoomimg(this)" />
+    <img id="2" src="2.png" onmouseenter="zoomimg(this)" />
+    <img id="3" src="3.png" onmouseenter="zoomimg(this)"/>
+    <img id="4" src="4.png" onmouseenter="zoomimg(this)"/>
+</div>
+</body>
+</html>
+<script>
+    function zoomimg(ev) {
+        var index = ev.id;
+        console.log(index);
+       document.getElementById('bigimg').setAttribute('src',index + '.png');
+
+    }
+
+</script>

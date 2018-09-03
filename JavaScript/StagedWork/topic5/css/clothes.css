@@ -1,0 +1,236 @@
+.container{
+    width: 100%;
+    min-width: 1000px;
+}
+.main{
+    width: 62.5%;
+    min-width: 999px;
+    margin: 15px auto auto auto;
+}
+.main-title{
+    width: 100%;
+    height: 68px;
+    font-size: 30px;
+    line-height: 68px;
+    background-color: #f8f8f8;
+    text-indent: 18px;
+}
+.md-container{
+    width: 100%;
+    margin-top: 12px;
+    height: 1510px;
+}
+.left-container{
+    width: 21.66%;
+    float: left;
+}
+.left-section {
+    width: 100%;
+    float: left;
+}
+
+.menu {
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+.menu:last-child {
+    border-bottom: 1px solid #ccc;
+}
+summary {
+    display: block;
+}
+.menu summary {
+    text-indent: 10px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #CCCCCC));*/
+    cursor: pointer;
+}
+
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+
+
+/*可用图片或字符,如果使用图片，请把content的值设置成空字符*/
+.menu summary:after{
+    content: "+";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    font-size:18px;
+    font-weight:700px;
+    float: right;
+}
+.menu[open] summary:after {
+    content: "-";
+    /*background: url(../Images/down.png) no-repeat center center;*/ /*展开时的图片*/
+
+}
+
+.menu ul {
+    padding: 10px 0;
+}
+.menu ul li {
+    list-style: none;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+}
+.menu span{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin: 2px 14px ;
+    border: solid 1px #999999;
+}
+.menu ul a{
+    color: #666666;;
+}
+
+.menu ul a span:hover{
+    background: #c0a369;
+}
+
+
+
+.right-container{
+    width: 76.66%;
+    float: left;
+    margin-left: 12px;
+}
+.tag-selected{
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    background-color: #f8f8f8;
+    margin-bottom: 5px;
+    text-indent: 2em;
+}
+.tag-selected div{
+    width: 180px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 1em;
+    display: inline-block;
+    border: solid 1px #ebebeb;
+    color: #999999;
+}
+.tag-selected span{
+    float: right;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.tag-sequence{
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    margin-bottom: 5px;
+    text-indent: 2em;
+    background-color: #f8f8f8;
+}
+.tag-sequence span{
+    display: inline-block;
+    margin:auto 24px;
+}
+.external-table{
+    height: 423px;
+    position: relative;
+
+}
+.tab-td{
+    position: relative;
+}
+.product-tag{
+    position: absolute;
+    bottom: 82px;
+}
+.product-tag .hot{
+    width: 42px;
+    height: 20px;
+    border: solid 1px #333333;
+    border-bottom: solid 2px #333333;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 16px;
+    font-weight: bold;
+    margin-left: 28px;
+}
+.product-tag .new{
+    width: 42px;
+    height: 20px;
+    border: solid 1px red;
+    border-bottom: solid 2px red;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 10px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-right: 16px;
+    margin-left: 28px;
+
+}
+.product-name{
+    text-indent: 28px;
+    /*width: 100%;*/
+    height: 13px;
+    font-size: 12px;
+    line-height: 13px;
+    color: #333333;
+    position: absolute;
+    bottom: 62px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.product-sum{
+    text-indent: 28px;
+    /*width: 100%;*/
+    height: 12px;
+    font-size: 12px;
+    color: #666666;
+    position: absolute;
+    bottom: 36px;
+}
+.product-price{
+    /*width: 100%;*/
+    text-indent: 28px;
+    height: 9px;
+    line-height: 9px;
+    font-size: 12px;
+    color: #c0a369;
+    position: absolute;
+    bottom: 10px;
+}
+.page{
+    float: right;
+    margin-top: 80px;
+}
+.page span{
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    margin: auto 6px;
+
+}
+.page a{
+    color: black;
+}
+.page .next-page{
+    border: solid 1px #c0a369;
+}

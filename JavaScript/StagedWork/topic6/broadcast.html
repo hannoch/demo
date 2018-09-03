@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            min-width: 1000px;
+        }
+        .box{
+            width: 50%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .pointbox{
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+        .pointbox span{
+            display: inline-block;
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <h3>6.	完成轮播，要求底下有四个点，图片自定，鼠标移上去切换点对应的图片，默认进行图片轮播和点轮播</h3>
+        <img id="myimg" src="1.jpg" width="100%"/>
+        <div class="pointbox">
+            <span id="1" onmouseenter="changebg(this)" onmouseleave="backbg(this)" style="background: #b07425"></span>
+            <span id="2"  onmouseenter="changebg(this)" onmouseleave="backbg(this)" ></span>
+            <span id="3"  onmouseenter="changebg(this)" onmouseleave="backbg(this)" ></span>
+            <span id="4"  onmouseenter="changebg(this)" onmouseleave="backbg(this)" ></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var myInter;
+    function setIner() {
+        myInter = setInterval('nextBroadcast()',1000);
+
+    }
+    setIner();
+    function nextBroadcast() {
+        var img = document.getElementById('myimg').getAttribute('src');
+        var index = img.substr(0,1);
+        var nextindex = String(parseInt(index)+1);
+        if(index =='4'){
+            document.getElementById('4').style.background='white';
+            document.getElementById('myimg').setAttribute('src','1.jpg');
+            document.getElementById('1').style.background='#b07425';
+        }
+        else {
+            document.getElementById(String(index)).style.background='white';
+            document.getElementById('myimg').setAttribute('src',nextindex +'.jpg');
+            document.getElementById(nextindex).style.background='#b07425';
+        }
+    }
+    function changebg(ev) {
+        clearInterval(myInter);
+        var spannum = document.getElementsByTagName("span");
+        for (var i=0;i<spannum.length;i++){
+            spannum[i].style.background='white';//把所有的点的背景都设置成白色
+        }
+        ev.style.background='#b07425';//单独对当前的点设置颜色
+        var index = ev.id;
+        document.getElementById('myimg').setAttribute('src',index + '.jpg');
+    }
+    function backbg(ev) {
+        ev.style.background='white';
+        setIner();
+    }
+
+
+
+
+</script>

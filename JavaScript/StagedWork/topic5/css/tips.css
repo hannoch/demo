@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+}
+#advbox{
+    position: absolute;
+    top: 15%;
+    left: 33%;
+}
+.adv{
+    height:498px;
+    width:654px;
+    position: relative;
+}
+.email{
+    width: 311px;
+    height: 43px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 23px;
+    bottom: 129px;
+    padding-left: 12px ;
+    font-size: 15px;
+    color: #999999;
+}
+.btn{
+    width: 323px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: #000000;
+    position: absolute;
+    right: 23px;
+    bottom: 69px;
+}
+.btn a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.tip{
+    width: 125px;
+    height: 13px;
+    position: absolute;
+    right: 31px;
+    bottom: 23px;
+}
+.tip a{
+    font-size: 12px;
+    color: #999999;
+    text-decoration: none;
+}
+#close{
+    float: right;
+    font-size: 26px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 34px;
+}

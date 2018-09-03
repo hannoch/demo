@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>油画</title>
+    <style>
+        .mydiv{
+            width: 56%;
+            margin:  0 auto;
+        }
+        .imgbox {
+            position: relative;
+
+        }
+        .myhidden{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.33);
+            color: white;
+            display: none;
+
+        }
+        .mid-top{
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+
+        }
+
+        .favorites-top{
+            float: right;
+            height: 60px;
+            width:100px;
+            line-height:  60px;
+            text-align: center;
+            background:white ;
+            margin: 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+        }
+        .download-top{
+            float: right;
+            height: 60px;
+            width:100px;
+            line-height:  60px;
+            text-align: center;
+            background: rgba(0, 0, 255, 0.49);
+            margin: 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .mid-bottom{
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            background: rgba(0, 0, 0, 0.62);
+            margin-top: 34%;
+            color: white;
+            text-indent: 12px;
+        }
+        .bottom-right{
+            float: right;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .red{
+            color: red;
+        }
+
+        .show{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mydiv">
+    <h3>9.	完成下面效果，图片自找</h3>
+    <p>
+        a)	当鼠标移上去出现遮罩，底下显示标题，右下角显示下载数量跟收藏，右上角显示两个按钮<br>
+        b)	当点击收藏时，收藏变成红色，星星变红，右下角显示的收藏+1，再点击一次表示取消收藏<br>
+        c)	当点击原图下载按钮时，可以下载图片，且下载+1
+    </p>
+    <div class="imgbox" id="imgbox" onmouseenter="showf()" onmouseleave="hiddenf()">
+        <img src="1.jpg" width="100%" />
+        <div id="myhidden" class="myhidden">
+            <div class="mid-top">
+               <div class="download-top">原图<img src="download.ico"/></div>
+                <div id="favorites-top" class="favorites-top" onclick="favoreclick(this)">收藏 <img id="star-top" src="white.ico"/> </div>
+            </div>
+            <div class="mid-bottom">
+                <span>涂料油画背景（1920*850）</span>
+                <div class="bottom-right">
+                    <img src="download.png"/>
+                    <span id="download">91598</span>
+                    <img src="white.ico"/>
+                    <span id="star">9299</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    var show = document.getElementById('imgbox').firstElementChild;
+    function showf() {
+        document.getElementById('myhidden').setAttribute('class','myhidden show');
+    }
+    function hiddenf() {
+        document.getElementById('myhidden').setAttribute('class','myhidden');
+    }
+    var download = document.getElementsByClassName('download-top')[0];
+    download.onclick=function () {
+        var downnum =  document.getElementById('download').innerText;
+          var temp = parseInt(downnum ) + 1;
+         document.getElementById('download').innerText = temp;
+    }
+
+    function favoreclick(ev) {
+        console.log(ev.style.color);
+            var starnum = document.getElementById('star').innerText;
+            if(ev.id){
+                document.getElementById('star-top').getAttribute('src','red.ico');
+                var temp1 = parseInt(starnum) +1;
+                document.getElementById('star').innerText= temp1;
+                ev.style.color='red';
+            }
+           else {
+                document.getElementById('star-top').getAttribute('src','white.ico');
+                var temp2 = parseInt(starnum) - 1 ;
+                document.getElementById('star').innerText= temp2;
+                ev.style.color='black';
+            }
+
+        }
+
+</script>

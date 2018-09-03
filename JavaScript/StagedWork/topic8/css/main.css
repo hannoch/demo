@@ -1,0 +1,164 @@
+
+.container{
+    width: 100%;
+    min-width: 1000px;
+}
+a {
+    text-decoration: none;
+}
+
+
+.table{
+    width: 65%;
+
+    margin: 0 auto;
+}
+.table tr td{
+    border-bottom: 2px rgba(0, 0, 0, 0.41) solid;
+    margin-top: 10px;
+}
+
+.footer{
+    width: 65%;
+    height: 50px;
+    margin: 20px auto;
+    text-align: center;
+    border-bottom: 2px rgba(0, 0, 0, 0.38) solid;
+}
+.left-footer{
+    width: 25%;
+    line-height: 50px;
+    float: left;
+}
+.continueShopping{
+    margin: 0 10px 0 34px;
+    float: left;
+}
+.continueShopping a{
+  color: black;
+}
+.totaled{
+    margin: 0 10px 0 10px;
+    float: left;
+}
+.totaled .total-num,.totaled .alreadySelect{
+    color: #b07425;
+}
+.right-footer{
+    width: 35%;
+    float: right;
+    line-height: 50px;
+}
+.totalPricebox{
+    color: #b07425;
+    float: left;
+}
+.totalPrice{
+    font-size: 30px;
+
+}
+.settleSccounts{
+    background-color: #b07425;
+    width: 50%;
+    font-size: 24px;
+    border: 0;
+    outline:none;
+    float: right;
+    cursor: pointer;
+}
+.settleSccounts a{
+    color: white;
+}
+.selecbox {
+    display: inline-block;
+    width: 10%;
+    height: 70px;
+    line-height: 70px;
+    text-indent: 2em;
+
+}
+.selecbox .selected{
+    cursor: pointer;
+    color: #b07425;
+}
+.icobox{
+    display: inline-block;
+    width: 15%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+
+}
+.icobox img{
+    vertical-align: middle;
+}
+
+.productname{
+    display: inline-block;
+    width: 27%;
+    height: 70px;
+    line-height: 70px;
+
+}
+.pricebox{
+    display: inline-block;
+    width: 5%;
+    height: 70px;
+    line-height: 70px;
+    text-align: right;
+
+}
+.amount{
+    display: inline-block;
+    width: 20%;
+    height: 70px;
+    line-height: 70px;
+    text-align:center;
+
+}
+.countbox{
+    border: 1px solid #e6e6e6;
+    height: 38px;
+    line-height: 38px;
+    margin: 10px 33px;
+}
+
+
+.amount .countbox .num-jian,.num-jia {
+    display: inline-block;
+    width: 29px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    border: 0;
+}
+.amount .countbox .input-num {
+    width: 58px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #333;
+    border: 0;
+    outline:none;
+    font-size: 18px;
+}
+.subtotal{
+    display: inline-block;
+    width: 5%;
+    height: 70px;
+    line-height: 70px;
+    text-align: right;
+    padding: 0 8% 0 5%;
+    color: #b07425;
+}
+.operate{
+    display: inline-block;
+    width: 5%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+}
