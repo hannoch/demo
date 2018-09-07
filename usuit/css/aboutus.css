@@ -1,0 +1,40 @@
+.container{
+    width: 100%;
+    min-width: 1920px;
+}
+.main{
+    width: 83.17%;
+    margin: 0 auto;
+}
+.banner{
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+.banner-text{
+    font-size: 60px;
+    color: #ffffff;
+    position: absolute;
+    right: 155px;
+    bottom: 201px;
+}
+.md-text{
+    width: 100%;
+    font-size: 60px;
+    text-align: center;
+    color: #c0a369;
+}
+.main-title{
+    text-align: center;
+    font-size: 60px;
+    color: #181818;
+    margin: 58px auto 36px auto;
+}
+.main-content{
+    width: 795px;
+    min-width: 795px;
+    margin: 0 auto 40px auto;
+}
+.main-content p{
+    text-indent: 2em;
+}

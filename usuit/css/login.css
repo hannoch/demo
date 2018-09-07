@@ -1,0 +1,129 @@
+.color999999{
+    color:#999999;
+}
+.container{
+    width: 100px;
+    min-width: 1920px;
+}
+.banner{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.login{
+    width: 298px;
+    height: 432px;
+    position: absolute;
+    /*left: 1150px;*/
+    left: 59.89%;
+    /*top:165px;*/
+    top:18.96%;
+    padding: 28px 26px;
+}
+.login-title{
+    width: 296px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+.sign-in-container{
+    opacity: 0.7;
+    margin-top: 35px;
+}
+
+.new-session a{
+    color: #999999;
+}
+.input-prepend{
+    height: 38px;
+    width: 100%;
+    line-height: 38px;
+    border: solid 1px #dcdcdc;
+    margin-bottom: 24px;
+}
+.input-prepend input{
+    border: none;
+    outline: medium;
+    padding: 4px 0px 4px 12px;
+    display: inline-block;
+    width: 85%;
+}
+.new-session img{
+    padding: 0px 0px 0px 9px;
+    vertical-align: middle;
+}
+
+.login-btn{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    background: #c0a369;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    margin-bottom: 24px;
+}
+.login-btn:hover{
+    background: #b29b48;
+}
+.forget-psd{
+    float: left;
+}
+.regsiter{
+    float: right;
+}
+.more-sign{
+    width: 100%;
+    min-height: 120px;
+    text-align: center;
+    margin-top: 27px;
+    position: relative;
+}
+.more-sign span:before {
+    content: "";
+    border-top: 1px solid #999999;
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: 8px;
+    left:5px;
+}
+.more-sign span:after{
+    content: "";
+    border-top: 1px solid #999999;
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: 8px;
+    right: 5px;
+}
+.more-sign-table{
+    margin: 45px auto 0 auto;
+    min-width: 200px;
+}
+.more-sign-table tr td{
+    display: inline-block;
+    margin: 7.5px 30px;
+}
+.more-sign-table tr td a{
+    color: #999999 ;
+}
+.md-content{
+    width: 100%;
+}
+.footer{
+    height: 368px !important;
+}
+.footer-table{
+    margin: 72px auto;
+    width: 14.06%;
+    min-width: 270px;
+}
+.footer-table tr td{
+    padding: 6px 33px;
+}
+

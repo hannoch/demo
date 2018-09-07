@@ -1,0 +1,39 @@
+.container{
+    width: 100%;
+    min-height: 1920px;
+}
+.banner{
+    width: 100%;
+}
+.main{
+    width: 83.17%;
+    margin: 45px auto 0 auto;
+    min-width: 1185px;
+    text-align: center;
+}
+.designer{
+    width: 100%;
+    margin: 0 auto 30px auto;
+    position: relative;
+}
+.designer-rightbtn,.designer-leftbtn{
+    width: 130px;
+    height: 50px;
+    border: solid 1px #c0a369;
+    text-align: center;
+    line-height: 50px;
+}
+.designer-leftbtn{
+    position: absolute;
+    left: 260px;
+    bottom: 125px;
+}
+.designer-rightbtn{
+    position: absolute;
+    right: 285px;
+    bottom: 125px;
+}
+.designer-leftbtn a,.designer-rightbtn a{
+    font-size: 18px;
+    color: #c0a369;
+}

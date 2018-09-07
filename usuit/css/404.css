@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+     color: #fcfcfc;
+     text-decoration: none;
+ }
+
+.container{
+    margin-top: 50px;
+    width: 100%;
+    min-width: 1000px;
+}
+.banner{
+    margin-top: 136px auto;
+    height: 814px;
+    width: 100%;
+    position: relative;
+}
+.content-text{
+    width: 540px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 36px;
+    color: #fcfcfc;
+    position: absolute;
+    bottom: 195px;
+    right: 484px;
+    left: 896px;
+}
+.back-btn{
+    width: 136px;
+    height: 32px;
+    border: solid 1px #ffffff;
+    text-align: center;
+    line-height: 32px;
+    position: absolute;
+    bottom: 134px;
+    left: 1050px;
+    right: 734px;
+    cursor: pointer;
+}
